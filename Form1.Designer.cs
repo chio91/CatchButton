@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             chase_but = new Button();
+            restart = new Button();
             SuspendLayout();
             // 
             // chase_but
@@ -45,12 +46,26 @@
             chase_but.Click += chase_but_Click;
             chase_but.MouseEnter += chase_but_MouseEnter;
             // 
+            // restart
+            // 
+            restart.Enabled = false;
+            restart.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            restart.Location = new Point(517, 248);
+            restart.Name = "restart";
+            restart.Size = new Size(202, 68);
+            restart.TabIndex = 1;
+            restart.Text = "다시 시작!";
+            restart.UseVisualStyleBackColor = true;
+            restart.Visible = false;
+            restart.Click += restart_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1256, 611);
+            Controls.Add(restart);
             Controls.Add(chase_but);
             Name = "Form1";
             Text = "버튼 잡기 게임";
@@ -60,5 +75,6 @@
         #endregion
 
         private Button chase_but;
+        private Button restart;
     }
 }

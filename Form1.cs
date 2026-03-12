@@ -1,8 +1,11 @@
+using System.Threading.Tasks.Sources;
+
 namespace CatchButton
 {
     public partial class Form1 : Form
     {
         int score = 250;
+        int miss = 0;
 
         public Form1()
         {
@@ -21,7 +24,16 @@ namespace CatchButton
 
             chase_but.Location = new Point(next_X, next_Y);
             score -= 10;
+            miss += 1;
             this.Text = $"버튼 위치 : ({next_X},{next_Y}) / 점수 : {score}";
+
+            if (miss >= 20)
+            {
+                chase_but.Enabled = false;
+                MessageBox.Show("Game Over!");
+                restart.Enabled = true;
+                restart.Visible = true;
+            }
         }
 
         private void chase_but_Click(object sender, EventArgs e)
@@ -31,6 +43,15 @@ namespace CatchButton
             chase_but.Width = (int)(chase_but.Width * 0.9);
             chase_but.Height = (int)(chase_but.Height * 0.9);
             this.Text = $"버튼 위치 : ({chase_but.Location.X},{chase_but.Location.Y}) / 점수 : {score}";
+        }
+
+        private void restart_Click(object sender, EventArgs e)
+        {
+            miss = 0;
+            score = 250;
+            chase_but.Enabled = true;
+            restart.Enabled = false;
+            restart.Visible = false;
         }
     }
 }
