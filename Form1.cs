@@ -23,7 +23,7 @@ namespace CatchButton
 
         private void chase_but_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("축하합니다~!");
         }
     }
 }
