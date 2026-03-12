@@ -15,6 +15,8 @@ namespace CatchButton
         private void chase_but_MouseEnter(object sender, EventArgs e)
         {
             Random rd = new Random();
+            System.Media.SoundPlayer player1 = new System.Media.SoundPlayer(@"C:\Users\지민\source\repos\CatchButton\bird-wings.wav");
+            player1.Play();
 
             int X_max = ClientSize.Width;
             int Y_max = ClientSize.Height;
@@ -27,7 +29,7 @@ namespace CatchButton
             miss += 1;
             this.Text = $"버튼 위치 : ({next_X},{next_Y}) / 점수 : {score}";
 
-            if (miss >= 20)
+            if (miss >= 100)
             {
                 chase_but.Enabled = false;
                 MessageBox.Show("Game Over!");
@@ -38,6 +40,9 @@ namespace CatchButton
 
         private void chase_but_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer player1 = new System.Media.SoundPlayer(@"C:\Users\지민\source\repos\CatchButton\cat-meow.wav");
+            player1.Play();
+
             MessageBox.Show("축하합니다~!");
             score += 100;
             chase_but.Width = (int)(chase_but.Width * 0.9);
