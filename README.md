@@ -11,8 +11,8 @@
 -2단계 : 버튼 잡을 경우 메시지박스 출력
 ![2주차 과제_2](https://github.com/user-attachments/assets/7606fdda-0b17-4945-8267-e3c94f5f52cd)
 
--3단계코드의실행스크린샷
-(여기에이미지삽입)
+-3단계 : 점수 기능 추가/ 버튼을 잡을 경우 버튼의 크기 감소)
+![2주차 과제_3](https://github.com/user-attachments/assets/79b7400d-2d28-47b3-8ce2-5d60a4094b2e)
 
 -4단계코드의실행스크린샷
 (여기에이미지삽입)
